@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A calculator for calculating students' GWA."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Kyrdien" />
+    <meta
+      name="keywords"
+      content="average calculator, grade tracker, academic performance, grade calculator"
+    />
+    <title>Grade Calculator</title>
+
+    <link rel="stylesheet" href="../Grade Calculator/style.css" />
+  </head>
+  <body>
+    <h1 class="title">Grade Calculator</h1>
+    <main>
+      <section class="input-section">
+        <h1 class="input-grade-header">Input Grades</h1>
+        <div class="label">
+          <input
+            autocapitalize="words"
+            class="subject-input"
+            type="text"
+            placeholder="Enter subject"
+            onkeydown="enterKey(event)"
+          />
+          <input
+            class="grade-input"
+            type="number"
+            placeholder="Enter grade"
+            onkeydown="enterKey(event)"
+          />
+          <button class="add-btn" onclick="addGrades()">Add to Grade</button>
+        </div>
+        <div class="html-grades list"></div>
+      </section>
+      <section class="result-section">
+        <div class="top-part">
+          <div class="button-calc">
+            <button
+              class="calculate-button"
+              onclick="console.log(calculateAver())"
+            >
+              Calculate
+            </button>
+          </div>
+          <div class="result">
+            <h1>Your Academic Rank</h1>
+            <h2 class="class-tier">-- Tier</h2>
+            <span class="grade-display grades">---</span>
+            <span class="performance performance-css">---</span>
+            <div class="bar-container">
+              <div class="bar-progress"></div>
+            </div>
+            <span class="progress-details progress">---</span>
+            <div class="aver-result"></div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <h1>Grades Dashboard</h1>
+          <canvas class="chart-grades chart"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="/Real Projects/Grade Calculator/chart.umd.min.js"></script>
+    <script src="../Grade Calculator/script.js"></script>
+  </body>
+</html>
